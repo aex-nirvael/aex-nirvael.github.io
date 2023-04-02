@@ -1,0 +1,94 @@
+@charset "UTF-8";
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 20px auto;
+    max-width:920px;
+    line-height:1.6;
+    background-color: rgb(17, 17, 17);
+    font-size:18px;
+    padding:0 10px
+}
+.header {
+    background-color: rgb(17, 17, 17);
+    text-align: center;
+    padding: 20px;
+    font-family: source_serif, serif;
+}
+.column {
+    float: left;
+    padding: 10px;
+}
+.column.left {
+    width: 25%;
+    background-color: rgb(17, 17, 17);
+    font-family: source_serif, serif;
+}
+.column.right {
+    width: 75%;
+    background-color: rgb(17, 17, 17);
+    font-family: source_serif_italic, serif;
+}
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+@media screen and (max-width: 600px) {
+    .column.left, .column.right {
+     width: 100%;
+    }
+}
+.footer {
+    background-color: rgb(17, 17, 17);
+    text-align: center;
+    padding: 10px;
+    font-family: source_serif, serif;
+}
+@font-face {
+    font-family: source_serif;
+    src: url(resources/fonts/SourceSerifPro-ExtraLight.ttf);
+    font-style: normal;
+    font-weight: 200;
+  }
+@font-face {
+    font-family: source_serif_italic;
+    src: url(resources/fonts/SourceSerifPro-ExtraLightItalic.ttf);
+    font-style: normal;
+    font-weight: 200;
+}
+@font-face {
+    font-family: source_serif_reg;
+    src: url(resources/fonts/SourceSerifPro-Regular.ttf);
+    font-style: normal;
+    font-weight: 200;
+}
+h1 {
+    color:rgb(236, 236, 236);
+    text-align: center;
+    line-height:1.2;
+}
+p {
+    color:rgb(236, 236, 236);
+}
+a:link {
+    color: rgb(28, 221, 221);
+    background-color: transparent;
+    text-decoration: none;
+}
+a:visited {
+    color: rgb(28, 221, 221);
+    background-color: transparent;
+    text-decoration: none;
+}
+a:hover {
+    color: rgb(28, 221, 221);
+    background-color: transparent;
+    text-decoration: underline;
+}
+a:active {
+    color: rgb(28, 221, 221);
+    background-color: transparent;
+    text-decoration: underline;
+}
