@@ -3,32 +3,40 @@
     box-sizing: border-box;
 }
 body {
-    margin: 20px auto;
-    max-width:920px;
-    line-height:1.6;
-    background-color: rgb(17, 17, 17);
+    margin: 10px auto;
+    max-width:1920px;
+    line-height:1.4;
+    background-color: rgb(234, 234, 234);
     font-size:18px;
     padding:0 10px
 }
 .header {
-    background-color: rgb(17, 17, 17);
+    background-color: rgb(234, 234, 234);
+    /* background-image: url('resources/imgs/image_0000.png'); */
     text-align: center;
-    padding: 20px;
-    font-family: source_serif, serif;
+    padding: 10px;
+    font-family: enochian, Times, serif;
 }
 .column {
     float: left;
     padding: 10px;
 }
+.column.top {
+    float: left;
+    padding: 1px;
+}
 .column.left {
-    width: 25%;
-    background-color: rgb(17, 17, 17);
-    font-family: source_serif, serif;
+    width: 17%;
+    background-color: rgb(234, 234, 234);
+    font-family: 'Times New Roman', Times, serif;
+    border-right: 1px solid;
+    padding: 20px;
 }
 .column.right {
-    width: 75%;
-    background-color: rgb(17, 17, 17);
-    font-family: source_serif_italic, serif;
+    width: 83%;
+    background-color: rgb(234, 234, 234);
+    font-family: 'Times New Roman', Times, serif;
+    padding: 20px;
 }
 .row::after {
     content: "";
@@ -41,11 +49,36 @@ body {
     }
 }
 .footer {
-    background-color: rgb(17, 17, 17);
+    background-color: rgb(234, 234, 234);
     text-align: center;
     padding: 10px;
-    font-family: source_serif, serif;
+    font-family: enochian, Times, serif;
 }
+.tab { margin-left: 20px; }
+.tab-2 { margin-left: 40px; }
+/* hyperlinks */
+a:link {
+    color: rgb(19, 19, 19);
+    background-color: transparent;
+    text-decoration: none;
+}
+a:visited {
+    color: rgb(19, 19, 19);
+    background-color: transparent;
+    text-decoration: none;
+}
+a:hover {
+    color: rgb(17, 17, 17);
+    background-color: transparent;
+    text-decoration: underline;
+}
+a:active {
+    color: rgb(19, 19, 19);
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+/* fonts */ 
 @font-face {
     font-family: source_serif;
     src: url(resources/fonts/SourceSerifPro-ExtraLight.ttf);
@@ -64,31 +97,21 @@ body {
     font-style: normal;
     font-weight: 200;
 }
-h1 {
-    color:rgb(236, 236, 236);
-    text-align: center;
-    line-height:1.2;
+@font-face {
+    font-family: modern_cybertronic;
+    src: url(resources/fonts/Modern_Cybertronic.ttf);
+    font-style: normal;
+    font-weight: 200;
 }
-p {
-    color:rgb(236, 236, 236);
+@font-face {
+    font-family: new_alphabet;
+    src: url(resources/fonts/New-Alphabet.woff);
+    font-style: normal;
+    font-weight: 200;
 }
-a:link {
-    color: rgb(28, 221, 221);
-    background-color: transparent;
-    text-decoration: none;
-}
-a:visited {
-    color: rgb(28, 221, 221);
-    background-color: transparent;
-    text-decoration: none;
-}
-a:hover {
-    color: rgb(28, 221, 221);
-    background-color: transparent;
-    text-decoration: underline;
-}
-a:active {
-    color: rgb(28, 221, 221);
-    background-color: transparent;
-    text-decoration: underline;
+@font-face {
+    font-family: enochian;
+    src: url(resources/fonts/Enochian.ttf);
+    font-style: normal;
+    font-weight: 200;
 }
