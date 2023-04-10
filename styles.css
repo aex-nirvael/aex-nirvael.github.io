@@ -56,6 +56,11 @@ body {
 }
 .tab { margin-left: 20px; }
 .tab-2 { margin-left: 40px; }
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
 /* hyperlinks */
 a:link {
     color: rgb(19, 19, 19);
