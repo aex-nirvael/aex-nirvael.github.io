@@ -111,7 +111,7 @@ a:active {
 }
 @font-face {
     font-family: enochian;
-    src: url(resources/fonts/Enochian.ttf);
+    src: url(resources/fonts/Enochian.otf);
     font-style: normal;
     font-weight: 200;
 }
