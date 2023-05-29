@@ -13,7 +13,7 @@ body {
     color:rgb(240, 238, 225);
     background-color: rgb(1,1,1);
     font-size:18px;
-    padding:0 0px;
+    padding:0 9px;
     /* height: 100%; */
 }
 .header {
@@ -38,15 +38,26 @@ body {
     color:rgb(240, 238, 225);
     font-family: angel_wish, Times, serif;
     /* border-right: 1px solid; */
-    padding: 3px;
+    padding: 19px;
     /* position: fixed; */
 }
 .column.right {
-    width: 90%;
+    width: 80%;
     background-color: rgb(1,1,1);
     color:rgb(240, 238, 225);
     font-family: cantique, Times, serif;
     padding: 19px;
+}
+.column.side {
+    width: 10%;
+    float: right;
+    background-color: rgb(1,1,1);
+    /* opacity: 0; */
+    color:rgb(240, 238, 225);
+    font-family: enochian, Times, serif;
+    /* border-right: 1px solid; */
+    padding: 19px;
+    /* position: fixed; */
 }
 .row::after {
     content: "";
@@ -54,7 +65,7 @@ body {
     clear: both;
 }
 @media screen and (max-width: 600px) {
-    .column.left, .column.right {
+    .column.left, .column.right, column.side {
      width: 100%;
     }
 }
@@ -78,6 +89,22 @@ img {
     height: auto;
     width: auto\9; /* ie8 */
 }
+iframe {
+    max-width: 100%;
+    height: auto\9;
+    width: auto\9; /* ie8 */
+}
+.centered-thing {
+    position: relative;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    /* transform: translate(-50%, -50%); */
+}
+.light-mode {
+    background-color: rgb(240, 238, 225);
+    color: rgb(2, 2, 2);
+  }
 /* hyperlinks */
 a:link {
     color:rgb(240, 238, 225);
