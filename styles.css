@@ -3,40 +3,43 @@
     box-sizing: border-box;
 }
 body {
-    margin: 10px auto;
+    margin: 1px auto;
     max-width:1920px;
     line-height:1.4;
-    background-color: rgb(234, 234, 234);
+    color:rgb(240, 238, 225);
+    background-color: rgb(1,1,1);
     font-size:18px;
-    padding:0 10px
+    padding:0 3px
 }
 .header {
-    background-color: rgb(234, 234, 234);
+    background-color: rgb(1,1,1);
     /* background-image: url('resources/imgs/image_0000.png'); */
     text-align: center;
-    padding: 10px;
-    font-family: enochian, Times, serif;
+    padding: 3px;
+    font-family: cantique, Times, serif;
 }
 .column {
     float: left;
-    padding: 10px;
+    padding: 3px;
 }
 .column.top {
     float: left;
-    padding: 1px;
+    padding: 3px;
 }
 .column.left {
-    width: 17%;
-    background-color: rgb(234, 234, 234);
-    font-family: 'Times New Roman', Times, serif;
+    width: 10%;
+    background-color: rgb(1,1,1);
+    color:rgb(240, 238, 225);
+    font-family: angel_wish, Times, serif;
     border-right: 1px solid;
-    padding: 20px;
+    padding: 3px;
 }
 .column.right {
-    width: 83%;
-    background-color: rgb(234, 234, 234);
-    font-family: 'Times New Roman', Times, serif;
-    padding: 20px;
+    width: 90%;
+    background-color: rgb(1,1,1);
+    color:rgb(240, 238, 225);
+    font-family: cantique, Times, serif;
+    padding: 19px;
 }
 .row::after {
     content: "";
@@ -49,9 +52,10 @@ body {
     }
 }
 .footer {
-    background-color: rgb(234, 234, 234);
+    background-color: rgb(1,1,1);
+    color:rgb(240, 238, 225);
     text-align: center;
-    padding: 10px;
+    padding: 3px;
     font-family: enochian, Times, serif;
 }
 .tab { margin-left: 20px; }
@@ -63,28 +67,32 @@ img {
 }
 /* hyperlinks */
 a:link {
-    color: rgb(19, 19, 19);
+    color:rgb(240, 238, 225);
     background-color: transparent;
+    font-family: angel_wish, Times, serif;
     text-decoration: none;
 }
 a:visited {
-    color: rgb(19, 19, 19);
+    color:rgb(240, 238, 225);
     background-color: transparent;
+    font-family: angel_wish, Times, serif;
     text-decoration: none;
 }
 a:hover {
-    color: rgb(17, 17, 17);
+    color:rgb(240, 238, 225);
     background-color: transparent;
+    font-family: angel_wish, Times, serif;
     text-decoration: underline;
 }
 a:active {
-    color: rgb(19, 19, 19);
+    color:rgb(240, 238, 225);
     background-color: transparent;
+    font-family: angel_wish, Times, serif;
     text-decoration: underline;
 }
 
 /* fonts */ 
-@font-face {
+/* @font-face {
     font-family: source_serif;
     src: url(resources/fonts/SourceSerifPro-ExtraLight.ttf);
     font-style: normal;
@@ -113,10 +121,40 @@ a:active {
     src: url(resources/fonts/New-Alphabet.woff);
     font-style: normal;
     font-weight: 200;
-}
+} */
 @font-face {
     font-family: enochian;
     src: url(resources/fonts/Enochian.otf);
     font-style: normal;
     font-weight: 200;
 }
+/* @font-face {
+    font-family: healthgoth;
+    src: url(resources/fonts/HealthGoth-Regular.otf);
+    font-style: normal;
+    font-weight: 200;
+} */
+@font-face {
+    font-family: angel_wish;
+    src: url(resources/fonts/Angel\ wish.ttf);
+    font-style: normal;
+    font-weight: 200;
+}
+@font-face {
+    font-family: akihibara;
+    src: url(resources/fonts/akihibara_hyper.ttf);
+    font-style: normal;
+    font-weight: 200;
+}
+@font-face {
+    font-family: cantique;
+    src: url(resources/fonts/cantique-master/fonts/Cantique-Normal.otf);
+    font-style: normal;
+    font-weight: 200;
+}
+/* @font-face {
+    font-family: isenheim;
+    src: url(resources/fonts/isenheim-main/fonts/OpenType-PS/Isenheim_Fin.otf);
+    font-style: normal;
+    font-weight: 200;
+} */
