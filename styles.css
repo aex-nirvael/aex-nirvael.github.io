@@ -2,14 +2,19 @@
 * {
     box-sizing: border-box;
 }
+.content{
+    min-height: calc(100vh - 60px) /* you have to minus header and footer width 
+    together*/
+}
 body {
     margin: 1px auto;
-    max-width:1920px;
+    /* max-width:1920px; */
     line-height:1.4;
     color:rgb(240, 238, 225);
     background-color: rgb(1,1,1);
     font-size:18px;
-    padding:0 3px
+    padding:0 0px;
+    /* height: 100%; */
 }
 .header {
     background-color: rgb(1,1,1);
@@ -29,10 +34,12 @@ body {
 .column.left {
     width: 10%;
     background-color: rgb(1,1,1);
+    /* opacity: 0; */
     color:rgb(240, 238, 225);
     font-family: angel_wish, Times, serif;
-    border-right: 1px solid;
+    /* border-right: 1px solid; */
     padding: 3px;
+    /* position: fixed; */
 }
 .column.right {
     width: 90%;
@@ -55,8 +62,14 @@ body {
     background-color: rgb(1,1,1);
     color:rgb(240, 238, 225);
     text-align: center;
-    padding: 3px;
+    padding: 0px;
     font-family: enochian, Times, serif;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 0; 
+    margin-bottom: -10px;
+    height: 60px;            
 }
 .tab { margin-left: 20px; }
 .tab-2 { margin-left: 40px; }
@@ -158,3 +171,17 @@ a:active {
     font-style: normal;
     font-weight: 200;
 } */
+/* scroll bar */
+body::-webkit-scrollbar {
+  width: 0px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: rgb(1,1,1);        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(161, 160, 148);    /* color of the scroll thumb */
+  border-radius: 1px;       /* roundness of the scroll thumb */
+  border: 3px solid rgb(161, 160, 148)e;  /* creates padding around scroll thumb */
+}
