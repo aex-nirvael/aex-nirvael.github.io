@@ -50,6 +50,23 @@ body {
     font-family: cantique, Times, serif;
     padding: 19px;
 }
+.column.right.left {
+    width: 32%;
+    background-color: rgb(1,1,1);
+    color:rgb(240, 238, 225);
+    font-family: cantique, Times, serif;
+    padding: 19px;
+}
+.column.right.right {
+    width: 32%;
+    background-color: rgb(1,1,1);
+    color:rgb(240, 238, 225);
+    font-family: cantique, Times, serif;
+    padding: 19px;
+}
+.colum-right > div { 
+    display: table-row; 
+}
 .column.side {
     width: 18%;
     float: right;
@@ -124,6 +141,7 @@ iframe {
     display: none;
     overflow: hidden;
     background-color: rgb(1,1,1);
+    min-height: 100%;
   }
 /* quick reset */
 * {
@@ -135,10 +153,13 @@ iframe {
   /* relevant styles */
   .img__wrap {
     position: relative;
-    height: 256px;
-    width: 480px;
-    display: table-cell;
-    vertical-align: middle;
+    height: 100%;
+    width: 100%;
+    display: block;
+    padding: 0px;
+    overflow: hidden;
+    margin: auto;
+    /* vertical-align: middle; */
   }
   
   .img__description {
@@ -153,8 +174,9 @@ iframe {
     color: rgb(240, 238, 225);
     visibility: hidden;
     opacity: 0;
-    vertical-align: middle;
+    /* vertical-align: middle; */
     font-size: 31;
+    padding: 0px;
   
     /* transition effect. not necessary */
     transition: opacity .2s, visibility .2s;
@@ -164,6 +186,11 @@ iframe {
     visibility: visible;
     opacity: 1;
   }
+
+/* Solid border */
+hr.solid {
+    border-top: 3px solid #bbb;
+}
 
 /* hyperlinks */
 a:link {
