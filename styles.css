@@ -10,14 +10,14 @@ body {
     margin: 1px auto;
     /* max-width:1920px; */
     line-height:1.4;
-    color:rgb(3,3,3);
-    background-color: rgb(245,245,248);
+    color:rgb(232,205,149);
+    background-color: rgb(15,15,15);
     font-size:18px;
     padding:0 7px;
     /* height: 100%; */
 }
 .header {
-    background-color: rgb(245,245,248);
+    background-color: rgb(15,15,15);
     /* background-image: url('resources/imgs/image_0000.png'); */
     text-align: center;
     padding: 0px;
@@ -33,9 +33,9 @@ body {
 }
 .column.left {
     width: 18%;
-    background-color: rgb(245,245,248);
+    background-color: rgb(15,15,15);
     /* opacity: 0; */
-    color:rgb(3,3,3);
+    color:rgb(232,205,149);
     font-family: angel_wish, Times, serif;
     /* border-right: 1px solid; */
     padding: 19px;
@@ -45,22 +45,22 @@ body {
 .column.right {
     display: table;
     width: 64%;
-    background-color: rgb(245,245,248);
-    color:rgb(3,3,3);
+    background-color: rgb(15,15,15);
+    color:rgb(232,205,149);
     font-family: cantique, Times, serif;
     padding: 19px;
 }
 .column.port {
     width: 32%;
-    background-color: rgb(245,245,248);
-    color:rgb(3,3,3);
+    background-color: rgb(15,15,15);
+    color:rgb(232,205,149);
     font-family: cantique, Times, serif;
     padding: 19px;
 }
 .column.starboard {
     width: 32%;
-    background-color: rgb(245,245,248);
-    color:rgb(3,3,3);
+    background-color: rgb(15,15,15);
+    color:rgb(232,205,149);
     font-family: cantique, Times, serif;
     padding: 19px;
 }
@@ -70,9 +70,9 @@ body {
 .column.side {
     width: 18%;
     float: right;
-    background-color: rgb(245,245,248);
+    background-color: rgb(15,15,15);
     /* opacity: 0; */
-    color:rgb(3,3,3);
+    color:rgb(232,205,149);
     font-family: enochian, Times, serif;
     /* border-right: 1px solid; */
     padding: 19px;
@@ -89,8 +89,8 @@ body {
     }
 }
 .footer {
-    background-color: rgb(245,245,248);
-    color:rgb(3,3,3);
+    background-color: rgb(15,15,15);
+    color:rgb(232,205,149);
     text-align: center;
     padding: 0px;
     font-family: enochian, Times, serif;
@@ -121,12 +121,12 @@ iframe {
     /* transform: translate(-50%, -50%); */
 }
 .light-mode {
-    background-color: rgb(3,3,3);
-    color: rgb(3,3,3);
+    background-color: rgb(232,205,149);
+    color: rgb(232,205,149);
 }
 .collapsible {
-    background-color: rgb(245,245,248);
-    color: rgb(3,3,3);
+    background-color: rgb(15,15,15);
+    color: rgb(232,205,149);
     cursor: pointer;
     padding: 7px;
     width: 100%;
@@ -140,7 +140,7 @@ iframe {
     padding: 0 18px;
     display: none;
     overflow: hidden;
-    background-color: rgb(245,245,248);
+    background-color: rgb(15,15,15);
     min-height: 100%;
   }
 /* quick reset */
@@ -170,8 +170,8 @@ iframe {
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(245,245,248, 0.3);
-    color: rgb(3,3,3);
+    background: rgba(15,15,15, 0.3);
+    color: rgb(232,205,149);
     visibility: hidden;
     opacity: 0;
     /* vertical-align: middle; */
@@ -189,30 +189,30 @@ iframe {
 
 /* Solid border */
 hr.solid {
-    border-top: 3px solid rgb(3,3,3);
+    border-top: 3px solid rgb(232,205,149);
 }
 
 /* hyperlinks */
 a:link {
-    color:rgb(3,3,3);
+    color:rgb(232,205,149);
     background-color: transparent;
     font-family: angel_wish, Times, serif;
     text-decoration: none;
 }
 a:visited {
-    color:rgb(3,3,3);
+    color:rgb(232,205,149);
     background-color: transparent;
     font-family: angel_wish, Times, serif;
     text-decoration: none;
 }
 a:hover {
-    color:rgb(3,3,3);
+    color:rgb(232,205,149);
     background-color: transparent;
     font-family: angel_wish, Times, serif;
     text-decoration: underline;
 }
 a:active {
-    color:rgb(3,3,3);
+    color:rgb(232,205,149);
     background-color: transparent;
     font-family: angel_wish, Times, serif;
     text-decoration: underline;
