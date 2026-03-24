@@ -138,7 +138,7 @@ body::-webkit-scrollbar { width: 0px; }
     text-align: center;
     font-family: enochian, serif;
     font-size: 11px;
-    color: rgba(232, 205, 149, 0.15);
+    color: rgba(232, 204, 149, 0.637);
     max-width: 800px;
     margin: 0 auto;
 }
@@ -325,11 +325,10 @@ body::-webkit-scrollbar { width: 0px; }
 }
 
 .audio-title {
-    font-family: monospace;
-    font-size: 11px;
+    font-family: cantique;
+    font-size: 15px;
     letter-spacing: 3px;
     margin-bottom: 25px;
-    text-transform: uppercase;
     opacity: 0.5;
 }
 /* WRITINGS SPECIFICS */
