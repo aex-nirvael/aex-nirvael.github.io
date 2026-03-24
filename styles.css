@@ -1,301 +1,391 @@
 @charset "UTF-8";
-* {
-    box-sizing: border-box;
-}
-.content{
-    min-height: calc(100vh - 60px) /* you have to minus header and footer width 
-    together*/
-}
-body {
-    margin: 1px auto;
-    /* max-width:1920px; */
-    line-height:1.4;
-    color:rgb(232,205,149);
-    background-color: rgb(15,15,15);
-    font-size:18px;
-    padding:0 7px;
-    /* height: 100%; */
-}
-.header {
-    background-color: rgb(15,15,15);
-    /* background-image: url('resources/imgs/image_0000.png'); */
-    text-align: center;
-    padding: 0px;
-    font-family: cantique, Times, serif;
-}
-.column {
-    float: left;
-    padding: 3px;
-}
-.column.top {
-    float: left;
-    padding: 3px;
-}
-.column.left {
-    width: 18%;
-    background-color: rgb(15,15,15);
-    /* opacity: 0; */
-    color:rgb(232,205,149);
-    font-family: angel_wish, Times, serif;
-    /* border-right: 1px solid; */
-    padding: 19px;
-    font-size:21px;
-    /* position: fixed; */
-}
-.column.right {
-    display: table;
-    width: 64%;
-    background-color: rgb(15,15,15);
-    color:rgb(232,205,149);
-    font-family: cantique, Times, serif;
-    padding: 19px;
-}
-.column.port {
-    width: 32%;
-    background-color: rgb(15,15,15);
-    color:rgb(232,205,149);
-    font-family: cantique, Times, serif;
-    padding: 19px;
-}
-.column.starboard {
-    width: 32%;
-    background-color: rgb(15,15,15);
-    color:rgb(232,205,149);
-    font-family: cantique, Times, serif;
-    padding: 19px;
-}
-.colum-right > div { 
-    display: table-row; 
-}
-.column.side {
-    width: 18%;
-    float: right;
-    background-color: rgb(15,15,15);
-    /* opacity: 0; */
-    color:rgb(232,205,149);
-    font-family: enochian, Times, serif;
-    /* border-right: 1px solid; */
-    padding: 19px;
-    /* position: fixed; */
-}
-.row::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-@media screen and (max-width: 600px) {
-    .column.left, .column.right, column.side {
-     width: 100%;
-    }
-}
-.footer {
-    background-color: rgb(15,15,15);
-    color:rgb(232,205,149);
-    text-align: center;
-    padding: 0px;
-    font-family: enochian, Times, serif;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    margin-top: 0; 
-    margin-bottom: -10px;
-    height: 60px;            
-}
-.tab { margin-left: 13px; }
-.tab-2 { margin-left: 40px; }
-img {
-    max-width: 100%;
-    height: auto;
-    width: auto\9; /* ie8 */
-}
-iframe {
-    max-width: 100%;
-    height: auto\9;
-    width: auto\9; /* ie8 */
-}
-.centered-thing {
-    position: relative;
-    margin: auto;
-    top: 50%;
-    left: 50%;
-    /* transform: translate(-50%, -50%); */
-}
-.light-mode {
-    background-color: rgb(232,205,149);
-    color: rgb(232,205,149);
-}
-.collapsible {
-    background-color: rgb(15,15,15);
-    color: rgb(232,205,149);
-    cursor: pointer;
-    padding: 7px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 21px;
-    font-family: angel_wish, Times, serif;
-}
-.menu {
-    padding: 0 18px;
-    display: none;
-    overflow: hidden;
-    background-color: rgb(15,15,15);
-    min-height: 100%;
-  }
-/* quick reset */
+
+/* =========================================
+   1. RESET & BASE (Shared)
+========================================= */
 * {
     margin: 0;
     padding: 0;
-    border: 0;
-  }
-  
-  /* relevant styles */
-  .img__wrap {
-    position: relative;
-    height: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(10, 10, 10);
+    color: rgb(232, 205, 149);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar { width: 0px; }
+
+/* =========================================
+   2. HOMEPAGE SPECIFIC (index.html)
+========================================= */
+.content-wrapper {
+    min-height: 100vh;
+    padding: 10px 30px; 
+    max-width: 1600px; 
+    margin: 0 auto;
     width: 100%;
-    display: block;
-    padding: 0px;
-    overflow: hidden;
-    margin: auto;
-    /* vertical-align: middle; */
-  }
-  
-  .img__description {
+}
+
+.site-header {
     text-align: center;
+    padding: 20px 0;
+}
+
+.banner-logo {
+    max-width: 600px;
+    width: 100%;
+    filter: none !important;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    padding: 15px 0;
+    border-top: 1px solid rgba(232, 205, 149, 0.2);
+    border-bottom: 1px solid rgba(232, 205, 149, 0.2);
+    margin-bottom: 20px;
+}
+
+.top-nav a {
+    color: rgb(232, 205, 149);
+    text-decoration: none;
+    font-family: angel_wish, serif;
+    font-size: 24px;
+}
+
+.top-nav a:hover {
+    color: #fff;
+}
+
+.about-section {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.about-container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 14px;
+    color: rgba(232, 205, 149, 0.7);
+}
+
+.about-container a {
+    color: rgb(232, 205, 149);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.about-container a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 15px; 
+    width: 100%;
+}
+
+.img__wrap {
+    position: relative;
+    border: 1px solid #1a1a1a;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background: #000;
+}
+
+.img__wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(1) brightness(0.5);
+    transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.img__wrap:hover img {
+    filter: grayscale(0) brightness(1);
+    transform: scale(1.04);
+}
+
+.img__description {
     position: absolute;
-    line-height: 256px;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(15,15,15, 0.3);
-    color: rgb(232,205,149);
-    visibility: hidden;
+    bottom: 10px;
+    right: 10px;
+    font-family: cantique, serif;
+    font-size: 14px;
+    color: rgb(232, 205, 149);
+    background: rgba(10, 10, 10, 0.9);
+    padding: 3px 10px;
     opacity: 0;
-    /* vertical-align: middle; */
-    font-size: 31;
-    padding: 0px;
-  
-    /* transition effect. not necessary */
-    transition: opacity .2s, visibility .2s;
-  }
-  
-  .img__wrap:hover .img__description {
-    visibility: visible;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+.img__wrap:hover .img__description {
     opacity: 1;
-  }
-
-/* Solid border */
-hr.solid {
-    border-top: 3px solid rgb(232,205,149);
 }
 
-/* hyperlinks */
-a:link {
-    color:rgb(232,205,149);
-    background-color: transparent;
-    font-family: angel_wish, Times, serif;
-    text-decoration: none;
+.site-footer {
+    padding: 80px 0 40px;
+    text-align: center;
+    font-family: enochian, serif;
+    font-size: 11px;
+    color: rgba(232, 205, 149, 0.15);
+    max-width: 800px;
+    margin: 0 auto;
 }
-a:visited {
-    color:rgb(232,205,149);
-    background-color: transparent;
-    font-family: angel_wish, Times, serif;
-    text-decoration: none;
+
+/* =========================================
+   3. ARCHIVE SPECIFIC (art.html)
+========================================= */
+.archive-body {
+    background: #0a0a0a;
+    color: rgb(232, 205, 149);
+    padding: 40px 20px;
 }
-a:hover {
-    color:rgb(232,205,149);
-    background-color: transparent;
-    font-family: angel_wish, Times, serif;
+
+.archive-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.archive-nav {
+    margin-bottom: 60px;
+}
+
+.archive-nav a {
+    font-size: 12px;
+    text-decoration: none;
+    color: rgba(232, 205, 149, 0.4);
+    font-family: monospace;
+}
+
+.archive-nav a:hover {
+    color: #fff;
+}
+
+.log-entry {
+    margin-bottom: 150px; /* Big gap between projects */
+}
+
+.log-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px solid rgba(232, 205, 149, 0.1);
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+}
+
+.log-header h1 {
+    font-family: angel_wish, serif;
+    font-weight: 100 !important; /* Forces the ultra-light look */
+    font-size: 3rem;
+    letter-spacing: 1px;
+}
+
+.entry-date {
+    font-family: monospace;
+    font-size: 12px;
+    opacity: 0.5;
+}
+
+.project-meta {
+    font-family: monospace;
+    font-size: 12px;
+    opacity: 0.6;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.project-meta a {
+    color: inherit;
     text-decoration: underline;
 }
-a:active {
-    color:rgb(232,205,149);
-    background-color: transparent;
-    font-family: angel_wish, Times, serif;
-    text-decoration: underline;
+
+.project-meta a:hover {
+    color: #fff;
 }
 
-/* fonts */ 
-/* @font-face {
-    font-family: source_serif;
-    src: url(resources/fonts/SourceSerifPro-ExtraLight.ttf);
-    font-style: normal;
-    font-weight: 200;
-  }
-@font-face {
-    font-family: source_serif_italic;
-    src: url(resources/fonts/SourceSerifPro-ExtraLightItalic.ttf);
-    font-style: normal;
-    font-weight: 200;
-}
-@font-face {
-    font-family: source_serif_reg;
-    src: url(resources/fonts/SourceSerifPro-Regular.ttf);
-    font-style: normal;
-    font-weight: 200;
-}
-@font-face {
-    font-family: modern_cybertronic;
-    src: url(resources/fonts/Modern_Cybertronic.ttf);
-    font-style: normal;
-    font-weight: 200;
-}
-@font-face {
-    font-family: new_alphabet;
-    src: url(resources/fonts/New-Alphabet.woff);
-    font-style: normal;
-    font-weight: 200;
-} */
-@font-face {
-    font-family: enochian;
-    src: url(resources/fonts/Enochian.otf);
-    font-style: normal;
-    font-weight: 200;
-}
-/* @font-face {
-    font-family: healthgoth;
-    src: url(resources/fonts/HealthGoth-Regular.otf);
-    font-style: normal;
-    font-weight: 200;
-} */
-@font-face {
-    font-family: angel_wish;
-    src: url(resources/fonts/Angel\ wish.ttf);
-    font-style: normal;
-    font-weight: 200;
-}
-@font-face {
-    font-family: akihibara;
-    src: url(resources/fonts/akihibara_hyper.ttf);
-    font-style: normal;
-    font-weight: 200;
-}
-@font-face {
-    font-family: cantique;
-    src: url(resources/fonts/cantique-master/fonts/Cantique-Normal.otf);
-    font-style: normal;
-    font-weight: 200;
-}
-/* @font-face {
-    font-family: isenheim;
-    src: url(resources/fonts/isenheim-main/fonts/OpenType-PS/Isenheim_Fin.otf);
-    font-style: normal;
-    font-weight: 200;
-} */
-/* scroll bar */
-body::-webkit-scrollbar {
-  width: 0px;               /* width of the entire scrollbar */
+.quote {
+    font-family: serif;
+    font-size: 14px;
+    font-style: italic;
+    opacity: 0.8;
+    margin-bottom: 30px;
+    border-left: 1px solid rgba(232, 205, 149, 0.3);
+    padding-left: 15px;
+    line-height: 1.6;
 }
 
-body::-webkit-scrollbar-track {
-  background: rgb(1,1,1);        /* color of the tracking area */
+/* YouTube Video Container - CRITICAL for videos to show up properly */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    margin-bottom: 40px;
+    background: #000;
 }
 
-body::-webkit-scrollbar-thumb {
-  background-color: rgb(161, 160, 148);    /* color of the scroll thumb */
-  border-radius: 1px;       /* roundness of the scroll thumb */
-  border: 3px solid rgb(161, 160, 148)e;  /* creates padding around scroll thumb */
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Keeps the Midnight/Monet image grids from becoming huge */
+.image-grid-small {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.image-grid-small img {
+    width: 100%;
+    height: auto;
+    border: 1px solid rgba(232, 205, 149, 0.1);
+}
+
+/* =========================================
+   4. FONTS & MOBILE SENSITIVITY
+========================================= */
+@font-face { font-family: enochian; src: url(resources/fonts/Enochian.otf); }
+@font-face { font-family: angel_wish; src: url(resources/fonts/Angel\ wish.ttf); }
+@font-face { font-family: cantique; src: url(resources/fonts/cantique-master/fonts/Cantique-Normal.otf); }
+
+@media screen and (max-width: 850px) {
+    .work-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+    .log-header h1 { font-size: 2rem; }
+}
+
+@media screen and (max-width: 500px) {
+    .work-grid { grid-template-columns: 1fr; }
+    .log-header { flex-direction: column; align-items: flex-start; }
+}
+/* MUSIC TOP NAV LAYOUT */
+.nav-top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(232, 205, 149, 0.1);
+    padding-bottom: 15px;
+    margin-bottom: 40px;
+}
+
+.errata-top {
+    font-family: enochian, serif;
+    font-size: 14px;
+    color: rgb(232, 205, 149);
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: opacity 0.3s;
+}
+
+.errata-top:hover {
+    opacity: 0.5;
+    text-shadow: 0 0 8px rgba(232, 205, 149, 0.4);
+}
+
+.nav-link {
+    font-family: monospace;
+    font-size: 12px;
+    color: rgba(232, 205, 149, 0.4);
+    text-decoration: none;
+}
+
+/* MUSIC CONTENT ALIGNMENT */
+.music-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px; /* More space between players */
+    margin-top: 50px;
+}
+
+.audio-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.audio-title {
+    font-family: monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    opacity: 0.5;
+}
+/* WRITINGS SPECIFICS */
+.writing-item {
+    margin-bottom: 80px;
+    max-width: 800px;
+    border-left: 1px solid rgba(232, 205, 149, 0.1);
+    padding-left: 30px;
+}
+
+.writing-header {
+    margin-bottom: 15px;
+}
+
+.writing-date {
+    font-family: monospace;
+    font-size: 11px;
+    opacity: 0.4;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.writing-title {
+    font-family: cantique, serif; /* Using your Cantique font for article titles */
+    font-size: 1.6rem;
+    font-weight: normal;
+    line-height: 1.2;
+    color: rgb(232, 205, 149);
+}
+
+.writing-excerpt {
+    font-size: 14px;
+    line-height: 1.7;
+    opacity: 0.7;
+    margin-bottom: 20px;
+}
+
+.read-link {
+    font-family: monospace;
+    font-size: 12px;
+    color: rgb(232, 205, 149);
+    text-decoration: none;
+    border: 1px solid rgba(232, 205, 149, 0.3);
+    padding: 5px 12px;
+    transition: all 0.3s;
+}
+
+.read-link:hover {
+    background: rgb(232, 205, 149);
+    color: #000;
+}
+
+.writing-placeholder {
+    font-family: enochian, serif;
+    font-size: 12px;
+    opacity: 0.15;
+    margin-top: 100px;
+    text-align: center;
 }
