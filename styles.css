@@ -388,3 +388,28 @@ body::-webkit-scrollbar { width: 0px; }
     margin-top: 100px;
     text-align: center;
 }
+
+/* Container for the text to manage spacing around it */
+.text-block {
+    margin-bottom: 2rem;
+    max-width: 800px; /* Optional: keeps line lengths readable */
+}
+
+/* Subheadings inside your log content */
+.text-block h2 {
+    font-family: cantique;
+    font-size: 1.2rem;
+    color: #e8cd95;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #333; /* Optional underlining */
+    padding-bottom: 0.5rem;
+}
+
+/* Paragraph styling */
+.text-block p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgb(232, 205, 149, 0.7);
+    margin-bottom: 1.2rem;
+}
