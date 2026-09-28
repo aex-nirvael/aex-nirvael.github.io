@@ -13,6 +13,8 @@
     font-family: angel_wish;
     src: url("resources/fonts/Angel wish.otf") format("opentype");
     font-display: swap;
+    ascent-override: 85%;
+    descent-override: 25%;
 }
 
 @font-face {
@@ -118,6 +120,7 @@ a:focus-visible, button:focus-visible {
     text-decoration: none;
     font-family: var(--font-display);
     font-size: 24px;
+    font-weight: 100;
 }
 
 .top-nav a:hover {
@@ -289,6 +292,7 @@ a:focus-visible, button:focus-visible {
     font-weight: 100 !important; /* Forces the ultra-light look */
     font-size: 3rem;
     letter-spacing: 1px;
+    line-height: 1.1;
 }
 
 .entry-date {
