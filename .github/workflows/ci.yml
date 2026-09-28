@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Verify UTF-8 Encoding
+        run: |
+          for file in *.html styles.css; do
+            if [ -f "$file" ]; then
+              encoding=$(file -bi "$file")
+              echo "Checking $file: $encoding"
+              if echo "$encoding" | grep -q "charset=utf-16"; then
+                echo "Error: $file is UTF-16 encoded!"
+                exit 1
+              fi
+            fi
+          done
+
+      - name: Validate HTML with HTMLHint
+        run: |
+          npx htmlhint *.html
